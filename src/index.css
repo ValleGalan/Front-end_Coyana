@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+ 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-light-color  /*color de fondo de toda la pagiba*/
+
+}
+
+
+/* variables de colores global */
+:root {
+  --color-light-beige: #EDCFA9;
+  --color-light-orange: #E89F71;
+  --color-medium-orange: #D57149;
+  --color-dark-brown: #AA4A30;
+}
+/*
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+ font-family: -apple-system, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+body {
+  background-color: var(--color-light-beige);
+  color: var(--color-dark-brown);
+}
+
+.header {
+  background-color: var(--color-medium-orange);
+}
+
+.button {
+  background-color: var(--color-medium-orange);
+  border: 2px solid var(--color-dark-brown);
+  color: var(--color-light-beige);
+}
+
+.footer {
+  background-color: var(--color-dark-brown);
+  color: var(--color-light-beige);
+}
+*/
+/* 
+#EDCFA9
+#E89F71
+#D57149
+#AA4A30
+
+Paleta de colores: 
+
+https://colorhunt.co/palette/edcfa9e89f71d57149aa4a30
+*/
