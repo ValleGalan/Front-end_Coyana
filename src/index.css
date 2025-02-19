@@ -9,7 +9,7 @@ body {
  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-light-color  /*color de fondo de toda la pagiba*/
+   /* @apply bg-light-color color de fondo de toda la pagiba*/
 
 }
 

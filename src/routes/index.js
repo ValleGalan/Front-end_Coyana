@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import AppCoyana from '../App_coyana';
+import App from '../App';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 import ForgotPassowrd from '../pages/ForgotPassowrd';
@@ -11,20 +11,18 @@ import CategoryProduct from '../pages/CategoryProduct';
 import ProductDetails from '../pages/ProductDetails';
 import Cart from '../pages/Cart';
 import SearchProduct from '../pages/SearchProduct';
-import Nosotros from '../pages/Nosotros';
+import Success from '../pages/Success'
+import Cancel from '../pages/Cancel'
+import OrderPage from '../pages/OrderPage'
+import AllOrder from '../pages/AllOrder'
+
+import MisionVision from '../pages/MisionVision';
 import ConozcaTejedores from '../pages/ConozcaTejedores';
 import Contacto from '../pages/Contacto';
-import PaymentForm from '../pages/PaymentForm';
 
-// Interfaces de la Fundación Puna
-import App from '../App';
-import HomeFPuna from '../pages/Blog/Home';
-import QuienesSomos from '../pages/Blog/QuienesSomos';
-import Valores from '../pages/Blog/Valores';
-import Blog from '../pages/Blog/Blog'
-import Mision from '../pages/Blog/Mision'
+
 // Stripe
-import { Elements } from '@stripe/react-stripe-js'; 
+import { Elements } from '@stripe/react-stripe-js'; //este componente permite que los hijos accedan a stripe ej:formulario
 import { loadStripe } from '@stripe/stripe-js'; 
 const stripePromise = loadStripe('pk_test_51Q0B4S02c5i0ylmqqzJcGFYQBP7hHF0MBURbLkKJRURY2CapetfFPyl2rA64ugwePUmEZdJ36BUyjZ0yu97HqZI9002OMGh7wx');
 
@@ -32,38 +30,11 @@ const stripePromise = loadStripe('pk_test_51Q0B4S02c5i0ylmqqzJcGFYQBP7hHF0MBURbL
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>, // Página principal Fundación Puna
+        element: <App/>, // Página principal COYANA
         children: [
             {
                 path: "",
-                element: <HomeFPuna/>
-            },
-            {
-                path: "quienes_somos",
-                element: <QuienesSomos/>
-            },
-            {
-                path: "mision",
-                element: <Mision/>
-            },
-            {
-                path: "valores",
-                element: <Valores/>
-            },
-            {
-                path: "blog",
-                element: <Blog/>
-            }
-        ]
-    },
-     // Página principal de Coyana
-    {
-        path: "coyana",
-        element: <AppCoyana />,
-        children: [
-            {
-                path: "",
-                element: <Home />
+                element: <Home/>
             },
             {
                 path: "login",
@@ -74,8 +45,8 @@ const router = createBrowserRouter([
                 element: <ForgotPassowrd />
             },
             {
-                path: "nosotros",
-                element: <Nosotros />
+                path: "mision-vision",
+                element: <MisionVision />
             },
             {
                 path: "tejedores",
@@ -102,33 +73,44 @@ const router = createBrowserRouter([
                 element: <Cart />
             },
             {
+                path : 'success',
+                element : <Success/>
+            },
+            {
+                path : "cancel",
+                element : <Cancel/>
+            },
+            {
                 path: "search",
                 element: <SearchProduct />
             },
             {
-                path: "payment",
-                element: (
-                    <Elements stripe={stripePromise}>
-                        <PaymentForm />
-                    </Elements>
-                )
-            }
-        ]
-    },
-    {
-        path: "admin-panel",
-        element: <AdminPanel />,
-        children: [
-            {
-                path: "all-users",
-                element: <AllUsers />
+                path : 'order',
+                element : <OrderPage/>
             },
             {
-                path: "all-products",
-                element: <AllProducts />
-            }
+                path: "admin-panel",
+                element: <AdminPanel />,
+                children: [
+                    {
+                        path: "all-users",
+                        element: <AllUsers />
+                    },
+                    {
+                        path: "all-products",
+                        element: <AllProducts />
+                    },
+                    {
+                        path : "all-orders",
+                        element : <AllOrder/>
+                    }
+                ]
+            },
         ]
     }
-]);
+     
+
+])
 
 export default router;
+ 

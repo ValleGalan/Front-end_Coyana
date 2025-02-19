@@ -82,16 +82,23 @@ const SummaryApi = {
         url : `${backendDomin}/api/newsletter`,
         method : 'post'
     },
-    
-    payment:{
-        url : `${backendDomin}/api/create-payment-intent`,
-        method : 'post'
-    },
     deleteProduct:{
-            url :  `${backendDomin}/api/delete`,//`${backendDomin}/api/delete-cart-product`,
-            method : 'delete' //post
+            url :  `${backendDomin}/api/delete`,
+            method : 'delete' 
     }
-    //enpoint blog
+    ,
+    payment : {
+        url : `${backendDomin}/api/checkout`,
+        method  : 'post'
+    },
+    getOrder : {
+        url : `${backendDomin}/api/order-list`,
+        method : 'get'
+    },
+    allOrder : {
+        url : `${backendDomin}/api/all-order`,
+        method : 'get'
+    }
 
 
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaFacebookF, FaPinterestP, FaInstagram, FaEnvelope } from 'react-icons/fa';
-import NewsletterSubscription from './NewsletterSubscription'; // Importa tu formulario aquí
+import NewsletterSubscription from './NewsletterSubscription';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
@@ -13,7 +15,7 @@ const Footer = () => {
             <h4 className='font-bold text-lg mb-2'>INFORMACIÓN</h4>
             <ul>
               <li><a href="/pages/shipping-info" className='hover:underline'>Envío y devoluciones</a></li>
-              <li><a href="/contacto" className='hover:underline' Link to={"/Contacto"}>Contáctenos</a></li>
+              <li><Link to={"contacto"} className='hover:underline'>Contáctenos</Link></li>
               <li><a href="/policies/terms-of-service" className='hover:underline'>Condiciones del servicio</a></li>
             </ul>
           </div>
@@ -22,8 +24,9 @@ const Footer = () => {
           <div className='w-full md:w-1/4 mb-4 md:mb-0'>
             <h4 className='font-bold text-lg mb-2'>SOBRE NOSOTROS</h4>
             <ul>
-              <li><a href="/nosotros" className='hover:underline' Link to={"/Nosotros"}>Misión, visión y valores</a></li>
-              <li><a href="/tejedores" className='hover:underline' Link to={"/ConozcaTejedores"}>Conozca a los tejedores</a></li>
+            
+              <li><Link to={"mision-vision"} className='hover:underline'> Misión, visión </Link></li>
+              <li><Link to={"tejedores"} className='hover:underline'>Conozca a los tejedores</Link></li>
             </ul>
           </div>
 
@@ -32,22 +35,22 @@ const Footer = () => {
             <h4 className='text-lg font-bold mb-2'>SIGUENOS POR AQUI</h4>
             <ul className='space-y-2'>
               <li className='flex items-center gap-2'>
-                <a href="https://www.facebook.com/threadsofperu" className='text-dark-brown hover:text-gray-800 flex items-center' target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/threadsofperu" className='hover:text-gray-800 flex items-center' target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <FaFacebookF size={20} className='mr-2' /> Facebook
                 </a>
               </li>
               <li className='flex items-center gap-2'>
-                <a href="https://www.pinterest.com.au/threadsofperu/" className='text-dark-brown hover:text-gray-800 flex items-center' target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                <a href="https://www.pinterest.com.au/threadsofperu/" className='hover:text-gray-800 flex items-center' target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
                   <FaPinterestP size={20} className='mr-2' /> Pinterest
                 </a>
               </li>
               <li className='flex items-center gap-2'>
-                <a href="https://www.instagram.com/threadsofperu/" className='text-dark-brown hover:text-gray-800 flex items-center' target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/threadsofperu/" className='hover:text-gray-800 flex items-center' target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <FaInstagram size={20} className='mr-2' /> Instagram
                 </a>
               </li>
               <li className='flex items-center gap-2'>
-                <a href="mailto:contact@threadsofperu.com" className='text-dark-brown hover:text-gray-800 flex items-center' aria-label="Email">
+                <a href="mailto:contact@threadsofperu.com" className=' hover:text-gray-800 flex items-center' aria-label="Email">
                   <FaEnvelope size={20} className='mr-2' /> Email
                 </a>
               </li>

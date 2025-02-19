@@ -1,10 +1,10 @@
 import React from "react";
 
-const Nosotros = () => {
+const MisionVision = () => {
   return (
     <div className="w-full px-4 py-8">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white shadow-lg rounded-lg p-6 prose prose-lg mx-auto">
+        <div className="bg-crema-claro-color shadow-lg rounded-lg p-6 prose prose-lg mx-auto">
           <h1 className="text-xl font-semibold text-center mb-4">
             Introducción
           </h1>
@@ -200,4 +200,4 @@ const Nosotros = () => {
   );
 };
 
-export default Nosotros;
+export default MisionVision;

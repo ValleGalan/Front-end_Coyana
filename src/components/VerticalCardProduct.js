@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import fetchCategoryWiseProduct from '../helpers/fetchCategoryWiseProduct';
-import displayINRCurrency from '../helpers/displayCurrency';
+import displayUSDCurrency from '../helpers/displayCurrency';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import addToCart from '../helpers/addToCart';
@@ -93,10 +93,10 @@ const VerticalCardProduct = ({ category, heading  }) => {
                         </h3>
                           <div className="flex justify-center gap-2">
                             <p className="text-black-600 font-medium text-base">
-                              {displayINRCurrency(product?.sellingPrice)}
+                              {displayUSDCurrency(product?.sellingPrice)}
                             </p>
                             <p className="text-slate-500 line-through text-sm md:text-base">
-                              {displayINRCurrency(product?.price)}
+                              {displayUSDCurrency(product?.price)}
                             </p>
                           </div>
                       
@@ -127,8 +127,8 @@ export default VerticalCardProduct;
                             <div className='p-4 grid gap-1'>
                                 <h2 className='font-medium text-sm md:text-base text-ellipsis line-clamp-1 text-black'>{product?.productName}</h2>
                                  <div className='flex gap-2'>
-                                    <p className='text-black-600 font-medium text-sm'>{displayINRCurrency(product?.sellingPrice)}</p>
-                                    <p className='text-slate-500 line-through text-xs md:text-sm'>{displayINRCurrency(product?.price)}</p>
+                                    <p className='text-black-600 font-medium text-sm'>{displayUSDCurrency(product?.sellingPrice)}</p>
+                                    <p className='text-slate-500 line-through text-xs md:text-sm'>{displayUSDCurrency(product?.price)}</p>
                                 </div>
                                 <button className='text-xs bg-medium-orange hover:bg-dark-brown bg-text-color px-2 py-0.5 rounded-full' onClick={(e) => handleAddToCart(e, product?._id)}>Añadir al carrito</button>
                             </div>

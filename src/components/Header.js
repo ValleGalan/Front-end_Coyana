@@ -48,18 +48,19 @@ const Header = () => {
     setSearch(value)
 
     if(value){
-      navigate(`/coyana/search?q=${value}`)
+      navigate(`search?q=${value}`)
     }else{
-      navigate("/coyana/search")
+      navigate("search")
     }
   }
   return (
     <header className='h-20 bg-anaranjado-color shadow-md   w-full z-40'>
       <div className=' h-full container mx-auto flex items-center px-4 justify-between'>
              
-            <Link to={""}> <img src={Logo_Blanco_Transp} className='w-56 h-auto'/>  </Link>
-            <Link to={"Nosotros"} className='hover:text-dark-brown'> Misión, visión y valores </Link>
-
+            <Link to={""}> <img src={Logo_Blanco_Transp} className='w-60 h-auto'/>  </Link>
+            <Link to={"mision-vision"} className='hover:text-dark-brown'> Misión, visión </Link>
+            <Link to={"tejedores"} className='hover:text-dark-brown'>Conozca a los tejedores</Link>
+            <Link to={"contacto"} className='hover:text-dark-brown'>Contáctenos</Link>
             <div className='hidden lg:flex items-center w-full justify-between max-w-sm border rounded-full focus-within:shadow pl-2'>
                 <input type='text' placeholder='buscar producto...' className='w-full outline-none' onChange={handleSearch} value={search}/>
                 <div className='text-lg min-w-[50px] h-8  flex items-center justify-center rounded-r-full '>
@@ -117,7 +118,7 @@ const Header = () => {
                       <button onClick={handleLogout} className='px-3 py-1 rounded-full bg-crema-claro-color hover:bg-anaranjado-claro-color'>Cerrar sesión</button>
                     )
                     : (
-                    <Link to={"/coyana/login"} className='px-3 py-1 rounded-full  bg-crema-claro-color hover:bg-anaranjado-claro-color'>Login</Link>
+                    <Link to={"login"} className='px-3 py-1 rounded-full  bg-crema-claro-color hover:bg-anaranjado-claro-color'>Login</Link>
                     )
                   }
                     

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import fetchCategoryWiseProduct from '../helpers/fetchCategoryWiseProduct'
-import displayINRCurrency from '../helpers/displayCurrency'
+import displayUSDCurrency from '../helpers/displayCurrency'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import addToCart from '../helpers/addToCart'
@@ -96,10 +96,10 @@ const HorizontalCardProduct = ({category, heading}) => {
                                 </h3>
                               <div className="flex justify-center gap-2">
                                 <p className="text-black-600 font-medium text-base">
-                                  {displayINRCurrency(product?.sellingPrice)}
+                                  {displayUSDCurrency(product?.sellingPrice)}
                                 </p>
                                 <p className="text-slate-500 line-through text-sm md:text-base">
-                                  {displayINRCurrency(product?.price)}
+                                  {displayUSDCurrency(product?.price)}
                                 </p>
                               </div>
                           
@@ -123,21 +123,4 @@ const HorizontalCardProduct = ({category, heading}) => {
 
 export default HorizontalCardProduct
 
-/** 
-                            <Link key={product?._id} to={"product/" + product?._id} className='w-full min-w-[400px] md:min-w-[450px] max-w-[400px] md:max-w-[450px] h-60 bg-white rounded-sm shadow flex'>
-                                <div className='bg-light-color h-full p-4 min-w-[200px] md:min-w-[260px]'>
-                                    <img src={product.productImage[0]} className='object-scale-down h-full hover:scale-110 transition-all' />
-                                </div>
-                                <div className='p-2 grid gap-1'>
-                                    <h2 className='font-medium text-xs md:text-base text-ellipsis line-clamp-1 text-black'>{product?.productName}</h2>
-                                    <p className='capitalize text-xs md:text-sm text-slate-500'>{product?.category}</p>
-                                   
-                                    <div className='flex gap-1'>
-                                        <p className='text-black-600 font-medium text-xs md:text-base'>{displayINRCurrency(product?.sellingPrice)}</p>
-                                        <p className='text-slate-500 line-through text-xs md:text-sm'>{displayINRCurrency(product?.price)}</p>
-                                    </div>
-                                    <button className='text-xs bg-medium-orange hover:bg-dark-brown bg-text-color px-2 py-0.5 rounded-full' onClick={(e) => handleAddToCart(e, product?._id)}>Añadir al carrito</button>
-                                </div>
-                            </Link>
-
-*/
+ 

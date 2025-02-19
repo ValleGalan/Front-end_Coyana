@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { MdModeEditOutline, MdDelete } from "react-icons/md";
 import AdminEditProduct from './AdminEditProduct';
-import displayINRCurrency from '../helpers/displayCurrency';
+import displayUSDCurrency from '../helpers/displayCurrency';
 import SummaryApi from '../api';
 import {toast} from 'react-toastify'
 
@@ -59,7 +59,7 @@ const AdminProductCard = ({
 
           <p className='font-semibold'>
             {
-              displayINRCurrency(data.sellingPrice)
+              displayUSDCurrency(data.sellingPrice)
             }
 
           </p>
