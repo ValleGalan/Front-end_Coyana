@@ -18,7 +18,7 @@ const Home = () => {
       <div className="flex-grow">
         <BannerProduct />
         <div className=' p-6 flex justify-center'>
-          <p className='text-size-home'>
+          <p className='text-lg'>
             <h2 >Nuestro propósito</h2>
             En un mundo donde la identidad y la autenticidad a menudo se diluyen en la producción en masa, surge la necesidad de reconectar con nuestras raíces y valorar las historias que existen detrás de cada creación artesanal. Nuestro proyecto busca rescatar y revalorizar la identidad y el trabajo de las manos ancestrales que nos brindan sus tejidos únicos y llenos de historia. Con este micro-emprendimiento queremos ser un puente entre los creadores y el mundo, destacando la herencia cultural que cada prenda representa.
           </p>
